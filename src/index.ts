@@ -1,3 +1,9 @@
-import { helloWorldFn } from './helloWorld';
+import { checkSubmodule } from './checkSubmodule';
 
-helloWorldFn(42);
+export function main() {
+  if (!checkSubmodule()) {
+    process.exit(1);
+  }
+}
+
+main();
